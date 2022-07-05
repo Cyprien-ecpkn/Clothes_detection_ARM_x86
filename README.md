@@ -14,13 +14,13 @@ The download link of these files are:
 
 For the `./clo_yolo/obj_4000.weights` the link is : `https://pan.baidu.com/s/1AT7tL9vNzFKGN4cQpKWusQ` And the password is : `1234`
 
-or you can try this link to download the file : `update soon`
+or you can try this link to download the file : `https://drive.google.com/file/d/1SnxWsylT3sVpSkTvsPV_Alxdv6YgUz15/view?usp=sharing`
 
 
 
 For the `./deep_sort/deep/checkpoint` the link is : `https://pan.baidu.com/s/1ZI_UVUsPC9NKPFmjyF4MiQ` And the password is : `1234`
 
-or you can try this link to download the file : `update soon`
+or you can try this link to download the file : `https://drive.google.com/file/d/1QYQ6I3j8iwXWwnV6uKbKosRkzCpUpBdv/view?usp=sharing`
 
 
 
