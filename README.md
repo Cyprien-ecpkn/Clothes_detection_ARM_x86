@@ -40,6 +40,24 @@ After install all the dependences of the project. We should go to our virtual en
 cd your_virtual_environment_path/lib/lib/python3.7/site-packages/torch/nn/modules/upsampling.py
 ```
 
+use the command :
+
+```shell
+python3 reid_clothes.py --video_path 'your video path'
+```
+
+if you have this problem ：
+
+```shell
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+```
+
+Then use this command to install opencv-python-headless :
+
+```shell
+pip install opencv-python-headless
+```
+
 And change the `upsampling.py` file. In line 152:
 
 ```python
