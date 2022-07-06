@@ -88,4 +88,12 @@ or
 python3 no_reid_clothes.py.py --video_path 'your video path'
 ```
 
+If you want to get the output in real time, then you just need to go into the `reid_clothes.py` file and modify it in line 359 : 
+
+```shell
+if self.args.display:
+     cv2.imshow("test", ori_img)
+```
+
+
 For the camera as input option, we will add it in a later optimization.
