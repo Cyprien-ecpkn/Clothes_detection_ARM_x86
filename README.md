@@ -95,5 +95,7 @@ if self.args.display:
      cv2.imshow("test", ori_img)
 ```
 
+And for the `no_reid_clothes.py` file is the same in line 356.
+
 
 For the camera as input option, we will add it in a later optimization.
