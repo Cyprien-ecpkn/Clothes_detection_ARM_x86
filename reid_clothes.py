@@ -186,6 +186,9 @@ class yolo_reid():
         exist_id_confidences1 = []
         exist_id_classid = []
 
+        temp_path, vid_writer = None, None
+        fourcc='mp4v'
+        save_path = './output.mp4'
         for video_path, img, ori_img, vid_cap in self.dataset:
             idx_frame += 1
             # print('aaaaaaaa', video_path, img.shape, im0s.shape, vid_cap)
@@ -362,6 +365,16 @@ class yolo_reid():
                 self.img_cnt += 1
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
+            if temp_path != save_path:  # new video
+                temp_path = save_path
+                if isinstance(vid_writer, cv2.VideoWriter):
+                    vid_writer.release()  # release previous video writer
+    
+                fps = vid_cap.get(cv2.CAP_PROP_FPS)
+                width = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+                height = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+                vid_writer = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*fourcc), fps, (width, height))
+            vid_writer.write(ori_img)
 
             self.logger.info("{}/time: {:.03f}s, fps: {:.03f}, detection numbers: {}, tracking numbers: {}" \
                              .format(idx_frame, end - t1, 1 / (end - t1),
